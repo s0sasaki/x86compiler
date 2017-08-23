@@ -1,0 +1,35 @@
+(BLOCK
+  (DECS
+    (VARDEC (INTTYP a))
+    (VARDEC (INTTYP b))
+  )
+  (STMTS
+    (ASSIGN (VAR a) (INTEXP 7))
+    (ASSIGN (VAR b) (INTEXP 1))
+    (IF 
+      (COND (!= (VAREXP (VAR a)) (INTEXP 5)))
+      (BLOCK
+        (DECS )
+        (STMTS 
+          (CALLPROC iprint (INTEXP 1))
+          (IF
+            (COND (<= (VAREXP (VAR a)) (INTEXP 5)))
+            (CALLPROC iprint (INTEXP 0))
+           ELSE
+            (CALLPROC iprint (INTEXP 2))
+          )
+        )
+      )
+    )
+    (WHILE
+      (COND (< (VAREXP (VAR b)) (INTEXP 10)))
+      (BLOCK
+        (DECS )
+        (STMTS 
+          (CALLPROC iprint (VAREXP (VAR b)))
+          (ASSIGN (VAR b) (CALLFUNC (+ (VAREXP (VAR b)) (INTEXP 1))))
+        )
+      )
+    )
+  )
+)

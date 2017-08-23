@@ -1,0 +1,20 @@
+{
+  int a[3];
+  int b;
+  int f(int x, int y){
+    int z;
+	z = x * y;
+    a[1] = 777;
+    iprint(a[1]);
+    iprint(z);
+	return z;
+    iprint(z);
+  }
+  int g(){
+    iprint(999);
+  }
+  b = f(111, 3);
+  g();
+  iprint(b);
+  iprint(a[1]);
+}

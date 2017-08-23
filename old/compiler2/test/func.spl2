@@ -1,0 +1,35 @@
+(BLOCK
+  (DECS
+    (VARDEC (ARRAYTYP 3 INTTYP a))
+    (VARDEC (INTTYP b))
+    (FUNCDEC f 
+             ((INTTYP x)
+              (INTTYP y))
+             INTTYP
+             (BLOCK
+               (DECS 
+                 (VARDEC (INTTYP z))
+               )
+               (STMTS 
+                 (ASSIGN (INDEXEDVAR (VAR a) (INTEXP 1)) (INTEXP 777))
+                 (ASSIGN (VAR z) (CALLFUNC (* (VAREXP (VAR x)) (VAREXP (VAR y)))))
+                 (CALLPROC iprint (VAREXP (INDEXEDVAR (VAR a) (INTEXP 1))))
+                 (CALLPROC iprint (VAREXP (VAR z)))
+                 (CALLPROC return (VAREXP (VAR z)))
+                 (CALLPROC iprint (VAREXP (INDEXEDVAR (VAR a) (INTEXP 1))))
+               )
+             )
+    )        
+    (FUNCDEC g 
+             ()
+             INTTYP
+             (CALLPROC iprint (INTEXP 999))
+    )        
+  )
+  (STMTS
+    (ASSIGN (VAR b) (CALLFUNC (f ((INTEXP 111) (INTEXP 3)))))
+    (CALLPROC g ())
+    (CALLPROC iprint (VAREXP (VAR b)))
+    (CALLPROC iprint (VAREXP (INDEXEDVAR (VAR a) (INTEXP 1))))
+  )
+)
