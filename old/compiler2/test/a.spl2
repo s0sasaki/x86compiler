@@ -1,7 +1,0 @@
-(BLOCK
-  (DECS
-    (VARDEC (INTTYP a)))
-  (STMTS
-    (ASSIGN (VAR a) (INTEXP 6))
-    (CALLPROC iprint (VAREXP (VAR a))))
-)
