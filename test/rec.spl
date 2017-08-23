@@ -1,0 +1,12 @@
+{
+    int a;
+    int f(int n){
+        if(n<1)
+            return 1;
+        else
+            return n * f(n-1);
+        end
+    }
+    a = f(5);
+    iprint(a);
+}

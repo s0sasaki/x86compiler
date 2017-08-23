@@ -1,0 +1,5 @@
+{
+int a;
+a = 6;
+iprint(a);
+}

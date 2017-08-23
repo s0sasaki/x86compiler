@@ -1,0 +1,16 @@
+{
+  int a;
+  int b;
+  a = 111;
+  b = 123;
+  iprint(a);
+  iprint(b);
+  {
+    int a;
+    a = 777;
+    iprint(a);
+    iprint(b);
+  }
+  iprint(a);
+  iprint(b);
+}

@@ -1,0 +1,18 @@
+{
+  int a;
+  int b;
+  a = 7;
+  b = 1;
+  if(a!=5){
+    iprint(1);
+    if(a<=5){
+      iprint(0);
+    }else{
+      iprint(2);
+    }
+  }
+  while(b<10){
+    iprint(b);
+    b = b+1;
+  }
+}
