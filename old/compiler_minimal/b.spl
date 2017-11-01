@@ -1,5 +1,12 @@
 {
-int a;
-a = 6;
-iprint(a);
+  int a;
+  int b;
+  a = 7;
+  b = 3;
+  iprint(a+1);
+  iprint(b+1);
+  iprint(a+b);
+  iprint(a-b);
+  iprint(a*b);
+  iprint(a/b);
 }

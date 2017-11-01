@@ -89,8 +89,6 @@ header   = "\t.globl main\n"      \
          + "main:\n"              \
          + "\tpushq %rbp\n"       \
          + "\tmovq %rsp, %rbp\n"
-prologue = "\tpushq %rbp\n"       \
-         + "\tmovq %rsp, %rbp\n"
 epilogue = "\tleaveq\n"           \
          + "\tretq\n"         
 
@@ -98,7 +96,6 @@ def compile(ast_blocks):
     assert(ast_blocks[0] == "BLOCK")
     print(io,       end="")
     print(header,   end="")
-    #print(prologue, end="")
     decs(ast_blocks[1]) 
     emit(ast_blocks[2]) 
     print(epilogue, end="")

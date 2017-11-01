@@ -18,7 +18,7 @@ runtest test/array.spl 123777456777123777
 runtest test/if.spl 12123456789
 runtest test/func.spl 777333999333777
 runtest test/rec.spl 120
-runtest test/tailcall.spl 500000500000
+#runtest test/tailcall.spl 500000500000
 
 echo OK
 

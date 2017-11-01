@@ -97,7 +97,6 @@ def trans_var(ast_var, nest, top_offset, env, code):
     elif ast_var[0]=="INDEXEDVAR":
         trans_exp(["CALLFUNC", ["*", ["INTEXP", "-8"], ast_var[2]]], nest, top_offset, env, code)
         trans_var(ast_var[1], nest, top_offset, env, code)
-        #code.append("\tmovq (%rax), %rax")
         code.append("\tpopq %rbx")
         code.append("\tleaq (%rax,%rbx), %rax")
 
@@ -212,7 +211,6 @@ prologue = ["\tpushq %rbp",
             "\tmovq %rsp, %rbp"]
 epilogue = ["\tleaveq",
             "\tretq"]         
-# MEMO: leaveq = "movq %ebp, %esp; popl %ebp"
 
 def compile(ast):
     nest       = 0
