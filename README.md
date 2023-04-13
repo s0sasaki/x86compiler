@@ -112,11 +112,11 @@ A toy compiler (with SLR parser, for x86_64, written in python).
       int b;
       int f(int x, int y){
         int z;
-    	z = x * y;
+        z = x * y;
         a[1] = 777;
         iprint(a[1]);
         iprint(z);
-    	return z;
+        return z;
         iprint(z);
       }
       int g(){
